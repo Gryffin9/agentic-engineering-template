@@ -48,6 +48,6 @@ Human review is required before accepting changes that affect public APIs, data 
 ## What this is not
 
 - It is not a replacement for engineering judgment.
-- It is not a prompt pack or model orchestration system.
+- It is not a prompt pack or automation framework.
 - It is not a copy of any private production repo.
-- It is not a place for proprietary architecture, private prompts, schemas, source pipelines, user data, or roadmaps.
+- It is not a place for proprietary architecture, private implementation details, user data, or roadmaps.
