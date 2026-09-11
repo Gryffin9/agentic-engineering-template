@@ -2,6 +2,8 @@
 
 A validation gate should be concrete enough that a different agent or human can run it without guessing.
 
+The commands below illustrate a hypothetical numerical project and are not implemented in this repository. For this repository's executable gate, use the [README commands](../README.md#run-the-executable-example).
+
 ## Good
 
 ```bash
