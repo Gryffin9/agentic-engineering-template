@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "task_id": "synthetic-scope-violation",
+  "goal": "Demonstrate a valid report rejected because its path exceeds the agreed scope.",
+  "allowed_files": ["examples/valid-task/report.json"],
+  "validations": ["nonempty_utf8", "json_object"],
+  "human_review_required": true
+}

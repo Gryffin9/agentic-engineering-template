@@ -1,5 +1,7 @@
 # Task Contract Template
 
+This prose format supports general engineering work. For the small runnable JSON example, use the [executable contract reference](executable-contract.md); the validator does not parse Markdown contracts.
+
 ## Goal
 
 Describe the concrete outcome in one or two sentences.

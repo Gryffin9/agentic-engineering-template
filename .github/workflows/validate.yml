@@ -1,0 +1,35 @@
+name: Validate synthetic task contracts
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit tests (includes expected rejection of invalid fixture)
+        run: python -m unittest discover -s tests -v
+      - name: Accept valid fixture
+        run: >-
+          python scripts/validate_contract.py
+          --contract examples/valid-task/contract.json
+          --changed-files examples/valid-task/changed-files.json
+      - name: Reject out-of-scope fixture with exit status 1
+        shell: bash
+        run: |
+          set +e
+          python scripts/validate_contract.py \
+            --contract examples/invalid-task/contract.json \
+            --changed-files examples/invalid-task/changed-files.json
+          result=$?
+          set -e
+          test "$result" -eq 1

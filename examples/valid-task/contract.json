@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "task_id": "synthetic-report",
+  "goal": "Add one synthetic JSON report inside the agreed file boundary.",
+  "allowed_files": ["examples/valid-task/report.json"],
+  "validations": ["nonempty_utf8", "json_object"],
+  "human_review_required": true
+}

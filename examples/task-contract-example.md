@@ -1,5 +1,7 @@
 # Example Task Contract
 
+This is an illustrative prose contract for a hypothetical project; the export command below is not implemented here. For a runnable task, see [valid-task/contract.json](valid-task/contract.json) and the [executable contract reference](../docs/executable-contract.md).
+
 ## Goal
 
 Add a deterministic CSV export command for a synthetic analysis report.
